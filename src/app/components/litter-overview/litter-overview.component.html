@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Moeder</th>
+      <th>Vader</th>
+      <th>Geboortedatum</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let litter of litters">
+      <td>{{ litter.pedigreeNameOfMother }}</td>
+      <td>{{ litter.pedigreeNameOfFather }}</td>
+      <td>{{ litter.pupsOfLitter }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
