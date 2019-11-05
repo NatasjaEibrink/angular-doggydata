@@ -9,6 +9,7 @@ import {RouterModule} from '@angular/router';
 import { LitterOverviewComponent } from './components/litter-overview/litter-overview.component';
 import { RegisterLitterComponent } from './components/register-litter/register-litter.component';
 import { HeaderComponent } from './components/header/header.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,6 +9,9 @@ import {Litter} from '../domain/Litter';
 export class RegisterLitterService {
 
   private litterUrl: string;
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
   constructor(private http: HttpClient) {
     this.litterUrl = 'http://localhost:8080/litters';
@@ -20,6 +23,6 @@ export class RegisterLitterService {
 
   public registerLitter(litter: Litter): Observable<Litter> {
     const url = `${this.litterUrl}/add`;
-    return this.http.post<Litter>(url, litter);
+    return this.http.post<Litter>(url, litter, this.httpOptions);
   }
 }

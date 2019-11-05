@@ -1,17 +1,23 @@
 <div class="container-fluid">
-<form>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
-    <label>Stamboomnaam Moeder:</label>
-    <input class="form-control" placeholder="">
+    <label>
+      <span>Stamboomnaam Moeder:</span>
+    <input type="text" formControlName="pedigreeNameOfMother" class="form-control">
+    </label>
   </div>
   <div class="form-group">
-    <label>Stamboomnaam Vader:</label>
-    <input class="form-control" placeholder="">
+    <label>
+     <span>Stamboomnaam Vader:</span>
+    <input type="text" formControlName="pedigreeNameOfFather"  class="form-control">
+    </label>
   </div>
   <div class="form-group">
-    <label>Geboortedatum Nest:</label>
-    <input class="form-control" placeholder="">
+    <label>
+      <span>Geboortedatum Nest:</span>
+    <input type="date" formControlName="birthDateOfLitter" class="form-control">
+    </label>
   </div>
-  <button type="submit" class="btn">Submit</button>
+  <button type="submit" class="btn btn-secondary">Submit</button>
 </form>
 </div>
