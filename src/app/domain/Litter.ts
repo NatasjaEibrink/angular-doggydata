@@ -6,4 +6,10 @@ export class Litter {
   pedigreeNameOfFather: string;
   birthDateOfLitter: Date;
   pupsOfLitter: Dog[];
+
+  constructor(pedigreeNameOfMother: string, pedigreeNameOfFather: string, birthDateOfLitter: Date ){
+    this.pedigreeNameOfMother = pedigreeNameOfMother;
+    this.pedigreeNameOfFather = pedigreeNameOfFather;
+    this.birthDateOfLitter = birthDateOfLitter;
+  }
 }

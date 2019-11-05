@@ -10,13 +10,15 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class LitterOverviewComponent implements OnInit {
 
-  litters: Litter[];
+  litters: Litter[] = [];
 
   constructor(private route: ActivatedRoute,
               private router: Router,
               private registerLitterService: RegisterLitterService ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getLitters();
+  }
 
   getLitters(): void {
     this.registerLitterService.getLitters().subscribe(litters => this.litters = litters);
