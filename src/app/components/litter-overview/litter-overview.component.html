@@ -5,6 +5,7 @@
       <th>Moeder</th>
       <th>Vader</th>
       <th>Geboortedatum</th>
+      <th>Pups</th>
     </tr>
     </thead>
     <tbody>
@@ -12,6 +13,12 @@
       <td>{{ litter.pedigreeNameOfMother }}</td>
       <td>{{ litter.pedigreeNameOfFather }}</td>
       <td>{{ litter.birthDateOfLitter }}</td>
+      <td>
+      <span *ngFor="let pup of litter.pupsOfLitter">
+        {{pup.pedigreeName}}
+        {{pup.formattedBirthDate}}
+      </span>
+      </td>
     </tr>
     </tbody>
   </table>

@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {RegisterLitterService} from '../../services/register-litter.service';
 import {FormArray, FormControl, FormGroup} from '@angular/forms';
 import {Litter} from '../../domain/Litter';
+import {Dog} from '../../domain/Dog';
 
 @Component({
   selector: 'app-register-litter',
@@ -40,7 +41,12 @@ export class RegisterLitterComponent implements OnInit {
     const pedigreeNameOfMother = this.registrationForm.get('pedigreeNameOfMother').value;
     const pedigreeNameOfFather = this.registrationForm.get('pedigreeNameOfFather').value;
     const birthDateOfLitter = this.registrationForm.get('birthDateOfLitter').value;
-    const litter = new Litter(pedigreeNameOfMother, pedigreeNameOfFather, birthDateOfLitter);
+    const puppyNames: string[] = this.registrationForm.get('puppies').value;
+    const pupsOfLitter: Dog[] = [];
+    puppyNames.forEach(name => {
+      console.log(pupsOfLitter.push(new Dog(name, birthDateOfLitter)));
+    });
+    const litter = new Litter(pedigreeNameOfMother, pedigreeNameOfFather, birthDateOfLitter, pupsOfLitter );
     this.registerLitterService.registerLitter(litter)
       .subscribe(status => {
         console.log(this.router);

@@ -5,11 +5,12 @@ export class Litter {
   pedigreeNameOfMother: string;
   pedigreeNameOfFather: string;
   birthDateOfLitter: Date;
-  pupsOfLitter: Dog[];
+  pupsOfLitter: Dog[] = [];
 
-  constructor(pedigreeNameOfMother: string, pedigreeNameOfFather: string, birthDateOfLitter: Date ){
+  constructor(pedigreeNameOfMother: string, pedigreeNameOfFather: string, birthDateOfLitter: Date, pupsOfLitter: Dog[] ) {
     this.pedigreeNameOfMother = pedigreeNameOfMother;
     this.pedigreeNameOfFather = pedigreeNameOfFather;
     this.birthDateOfLitter = birthDateOfLitter;
+    this.pupsOfLitter = pupsOfLitter;
   }
 }
