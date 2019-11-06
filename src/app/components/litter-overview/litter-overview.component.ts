@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Litter} from '../../domain/Litter';
-import {RegisterLitterService} from '../../services/register-litter.service';
+import {RegisterLitterService} from '../../services/litters/register-litter.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({

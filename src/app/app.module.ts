@@ -10,6 +10,7 @@ import { LitterOverviewComponent } from './components/litter-overview/litter-ove
 import { RegisterLitterComponent } from './components/register-litter/register-litter.component';
 import { HeaderComponent } from './components/header/header.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { DogDetailsComponent } from './components/dog-details/dog-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     NavBarComponent,
     LitterOverviewComponent,
     RegisterLitterComponent,
-    HeaderComponent
+    HeaderComponent,
+    DogDetailsComponent
   ],
   imports: [
     BrowserModule,

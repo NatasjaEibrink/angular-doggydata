@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Litter} from '../domain/Litter';
+import {Litter} from '../../domain/Litter';
 import {map} from 'rxjs/operators';
 import moment from 'moment';
 

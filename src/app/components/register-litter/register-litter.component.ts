@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {RegisterLitterService} from '../../services/register-litter.service';
+import {RegisterLitterService} from '../../services/litters/register-litter.service';
 import {FormArray, FormControl, FormGroup} from '@angular/forms';
 import {Litter} from '../../domain/Litter';
 import {Dog} from '../../domain/Dog';
@@ -8,7 +8,7 @@ import {Dog} from '../../domain/Dog';
 //custom data field
 interface puppyDataFields{
   pedigreeName: string;
-  sex: 'Male'|'Female';
+  sex: 'Reu'|'Teef';
 }
 
 @Component({

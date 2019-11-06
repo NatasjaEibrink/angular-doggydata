@@ -15,9 +15,7 @@
       <td>{{ litter.birthDateOfLitter }}</td>
       <td>
       <span *ngFor="let pup of litter.pupsOfLitter">
-        {{pup.pedigreeName}}
-        {{pup.formattedBirthDate}}
-        {{pup.sex}}
+          <span [routerLink]="['/dogs', pup.id]">{{pup.pedigreeName}}</span>
       </span>
       </td>
     </tr>

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Naam</th>
+    <th>Geboortedatum</th>
+    <th>Geslacht</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngIf="dog">
+  <td>{{dog.pedigreeName}}</td>
+  <td>{{dog.formattedBirthDate}}</td>
+  <td>{{dog.sex}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
