@@ -6,10 +6,10 @@ export class Dog {
   birthDate: Date
   formattedBirthDate: string;
 
-  constructor(pedigreeName: string, birthDate: Date) {
+  constructor(pedigreeName: string, birthDate: Date, sex: string) {
     this.pedigreeName = pedigreeName;
+    this.sex = sex;
     this.birthDate = birthDate;
-
   }
 
 }

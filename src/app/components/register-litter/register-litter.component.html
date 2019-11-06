@@ -27,7 +27,18 @@
   <div class="form-group">
     <ul formArrayName="puppies">
       <li *ngFor="let puppy of registrationForm.controls.puppies.controls; let i = index">
-        <input type="text" formControlName="{{i}}">
+        <div formGroupName="{{i}}">
+        <span>Stamboomnaam van de pup</span>
+        <input type="text" formControlName="pedigreeName">
+          <select formControlName="sex">
+            <option value="Male">
+              Man
+            </option>
+            <option value="Female">
+              Vrouw
+            </option>
+          </select>
+        </div>
       </li>
     </ul>
   </div>
