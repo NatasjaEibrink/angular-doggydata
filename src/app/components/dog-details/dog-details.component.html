@@ -5,22 +5,14 @@
   </div>
   <div class="column">
     <h2>Informatie</h2>
-    <table>
-      <thead>
-      <tr>
-        <th>Naam</th>
-        <th>Geboortedatum</th>
-        <th>Geslacht</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngIf="dog">
-        <td>{{dog.pedigreeName}}</td>
-        <td>{{dog.formattedBirthDate}}</td>
-        <td>{{dog.sex}}</td>
-      </tr>
-      </tbody>
-    </table>
+    <div class="flex-container" *ngIf="dog">
+      <p>Naam</p>
+      <span>{{dog.pedigreeName}}</span>
+      <p>Geboortedatum</p>
+      <span>{{dog.formattedBirthDate}}</span>
+      <p>Geslacht</p>
+      <span>{{dog.sex}}</span>
+    </div>
   </div>
   <div class="column">
     <h2>Stamboom</h2>

@@ -1,14 +1,10 @@
-th, td {
-  border-bottom: 1px solid #f0c7ff;
-}
 
-th, td {
-  padding: 10px;
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  color: #a1566f;
+  font-weight: bold;
   text-align: left;
-}
-
-.table{
-  width: 50%;
+  padding-top: 10px;
 }
 
 .row {
@@ -16,14 +12,30 @@ th, td {
 }
 
 .column {
+  background-color: #eeeeee;
   padding-left: 20px;
   flex: 33%;
 }
 
 img {
-  padding-top: 80px;
+  padding-top: 90px;
+  padding-bottom: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+span{
+  font-family: "Times New Roman", Times, serif;
 }
