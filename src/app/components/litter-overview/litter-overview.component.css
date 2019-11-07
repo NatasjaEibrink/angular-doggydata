@@ -1,0 +1,7 @@
+span[ng-reflect-router-link] {
+  cursor: pointer;
+}
+
+span:hover span {
+  color: #9a687a;
+}
