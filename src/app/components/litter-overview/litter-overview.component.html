@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <table class="table table-striped">
+  <table>
     <thead>
     <tr>
       <th>Moeder</th>
@@ -14,9 +14,11 @@
       <td>{{ litter.pedigreeNameOfFather }}</td>
       <td>{{ litter.birthDateOfLitter }}</td>
       <td>
+        <div class="flex-container">
       <span *ngFor="let pup of litter.pupsOfLitter">
-          <span [routerLink]="['/dogs', pup.id]">{{pup.pedigreeName}}</span> <br>
+          <span [routerLink]="['/dogs', pup.id]">{{pup.pedigreeName}}</span>
       </span>
+        </div>
       </td>
     </tr>
     </tbody>

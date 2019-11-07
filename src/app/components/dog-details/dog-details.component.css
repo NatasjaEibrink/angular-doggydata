@@ -1,0 +1,29 @@
+th, td {
+  border-bottom: 1px solid #f0c7ff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table{
+  width: 50%;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  padding-left: 20px;
+  flex: 33%;
+}
+
+img {
+  padding-top: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}

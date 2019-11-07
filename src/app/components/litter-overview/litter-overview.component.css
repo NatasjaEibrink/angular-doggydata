@@ -5,3 +5,21 @@ span[ng-reflect-router-link] {
 span:hover span {
   color: #9a687a;
 }
+
+th, td {
+  border-bottom: 1px solid #f0c7ff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table{
+  width: 50%;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+}

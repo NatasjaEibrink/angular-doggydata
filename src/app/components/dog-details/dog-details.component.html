@@ -1,18 +1,28 @@
-<div class="container-fluid">
-  <table class="table table-striped">
-  <thead>
-  <tr>
-    <th>Naam</th>
-    <th>Geboortedatum</th>
-    <th>Geslacht</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngIf="dog">
-  <td>{{dog.pedigreeName}}</td>
-  <td>{{dog.formattedBirthDate}}</td>
-  <td>{{dog.sex}}</td>
-  </tr>
-  </tbody>
-</table>
+
+<div class="row">
+  <div class="column">
+    <img src="http://www.shibapedigree.com/pics/medium/2643/med_5dc42af385080.jpeg" alt="Baggio">
+  </div>
+  <div class="column">
+    <h2>Informatie</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Naam</th>
+        <th>Geboortedatum</th>
+        <th>Geslacht</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngIf="dog">
+        <td>{{dog.pedigreeName}}</td>
+        <td>{{dog.formattedBirthDate}}</td>
+        <td>{{dog.sex}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="column">
+    <h2>Stamboom</h2>
+  </div>
 </div>
