@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Litter} from '../../domain/Litter';
 import {RegisterLitterService} from '../../services/litters/register-litter.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-litter-overview',
@@ -21,7 +22,10 @@ export class LitterOverviewComponent implements OnInit {
   }
 
   getLitters(): void {
-    this.registerLitterService.getLitters().subscribe(litters => this.litters = litters);
+    this.registerLitterService.getLitters().pipe(
+      map(litters => litters.sort((a,b) =>
+        new Date(a.birthDateOfLitter).getDate() - new Date(b.birthDateOfLitter).getDate()))
+    ).subscribe(litters => this.litters = litters);
   }
 
 }
