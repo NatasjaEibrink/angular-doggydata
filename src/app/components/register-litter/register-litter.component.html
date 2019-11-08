@@ -1,7 +1,11 @@
-<div class="container-fluid">
-<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+<div class="container">
+
   <h1>Registreer een nest</h1>
   <p>Vul dit formulier in om een nest aan te melden</p>
+  <hr>
+
+  <div>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
 
   <div class="row">
   <div class="col-left">
@@ -47,23 +51,29 @@
     </div>
   </div>
 
-  <div>
-    <div class="row">
-    <ul formArrayName="puppies" style="list-style-type:none">
+    <div>
+    <ul formArrayName="puppies">
       <li *ngFor="let puppy of registrationForm.controls.puppies.controls; let i = index">
         <div formGroupName="{{i}}">
 
-          <div>
+          <div class="row">
+            <div class="col-left">
           <label class="label">
             <span>Stamboomnaam: </span>
-        <input type="text" name="Stamboomnaam van de pup" formControlName="pedigreeName">
           </label>
+            </div>
+            <div class="col-right">
+              <input type="text" name="Stamboomnaam van de pup" formControlName="pedigreeName">
+            </div>
           </div>
 
-          <div class="flex-container">
+          <div class="row">
+          <div class="col-left">
           <label>
           <span>Geslacht:</span>
           </label>
+          </div>
+            <div class="col-right">
           <select formControlName="sex">
             <option value="Reu">
               Reu
@@ -73,19 +83,28 @@
             </option>
           </select>
           </div>
+          </div>
 
-          <div class="flex-container">
+          <div class="row">
+            <div class="col-left">
+              <label>
           <span>Foto:</span>
+              </label>
+          </div>
+            <div class="col-right">
+              <div class="flex-container">
           <input type="file" name="pic" accept="image/*">
           <input type="submit">
-        </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </li>
     </ul>
     </div>
-  </div>
 
   <button type="submit" class="btn btn-secondary">Submit</button>
 </form>
+  </div>
 </div>

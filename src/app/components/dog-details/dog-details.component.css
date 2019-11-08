@@ -8,8 +8,8 @@ h2 {
 }
 
 .row {
-  display: flex;
-}
+   display: flex;
+ }
 
 .column {
   background-color: #eeeeee;
