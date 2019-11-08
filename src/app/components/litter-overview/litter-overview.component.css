@@ -6,8 +6,12 @@ span:hover span {
   color: #9a687a;
 }
 
-th, td {
-  border-bottom: 1px solid #f0c7ff;
+th{
+  font-size: 2em; margin: .67em 0;
+  font-family: "Times New Roman", Times, serif;
+  color: #a1566f;
+  font-weight: bold;
+  border-bottom: 1px solid #151116;
 }
 
 th, td {

@@ -31,11 +31,7 @@ img {
   flex-direction: column;
 }
 
-p {
+.flex-container h3, p {
   font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
-}
-
-span{
-  font-family: "Times New Roman", Times, serif;
+  margin: 3px;
 }

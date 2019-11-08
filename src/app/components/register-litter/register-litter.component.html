@@ -1,39 +1,66 @@
 <div class="container-fluid">
 <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-  <div class="form-group">
+  <h1>Registreer een nest</h1>
+  <p>Vul dit formulier in om een nest aan te melden</p>
+
+  <div class="row">
+  <div class="col-left">
     <label>
       <span>Stamboomnaam Moeder:</span>
-    <input type="text" formControlName="pedigreeNameOfMother" class="form-control">
     </label>
   </div>
-  <div class="form-group">
-    <label>
-     <span>Stamboomnaam Vader:</span>
-    <input type="text" formControlName="pedigreeNameOfFather"  class="form-control">
-    </label>
+<div class="col-right">
+    <input type="text" formControlName="pedigreeNameOfMother">
+</div>
   </div>
-  <div class="form-group">
-    <label>
-      <span>Geboortedatum Nest:</span>
-    <input type="date" formControlName="birthDateOfLitter" class="form-control">
-    </label>
+
+  <div class="row">
+    <div class="col-left">
+      <label>
+        <span>Stamboomnaam Vader:</span>
+      </label>
+    </div>
+    <div class="col-right">
+      <input type="text" formControlName="pedigreeNameOfFather">
+    </div>
   </div>
-  <div class="form-group">
-    <label>
-      <span>Aantal pups:</span>
-  <input type="number" formControlName="aantalPups" min="1" max="10" (change)="onChange()">
-    </label>
+
+  <div class="row">
+    <div class="col-left">
+      <label>
+        <span>Geboortedatum Nest:</span>
+      </label>
+    </div>
+    <div class="col-right">
+      <input type="date" formControlName="birthDateOfLitter">
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-left">
+      <label>
+        <span>Aantal pups:</span>
+      </label>
+    </div>
+    <div class="col-right">
+      <input type="number" formControlName="aantalPups" min="1" max="10" (change)="onChange()">
+    </div>
+  </div>
+
   <div>
+    <div class="row">
     <ul formArrayName="puppies" style="list-style-type:none">
       <li *ngFor="let puppy of registrationForm.controls.puppies.controls; let i = index">
         <div formGroupName="{{i}}">
-          <div class="form-group">
+
+          <div>
           <label class="label">
             <span>Stamboomnaam: </span>
         <input type="text" name="Stamboomnaam van de pup" formControlName="pedigreeName">
           </label>
           </div>
+
+          <div class="flex-container">
           <label>
           <span>Geslacht:</span>
           </label>
@@ -45,10 +72,20 @@
               Teef
             </option>
           </select>
+          </div>
+
+          <div class="flex-container">
+          <span>Foto:</span>
+          <input type="file" name="pic" accept="image/*">
+          <input type="submit">
+        </div>
+
         </div>
       </li>
     </ul>
+    </div>
   </div>
+
   <button type="submit" class="btn btn-secondary">Submit</button>
 </form>
 </div>
