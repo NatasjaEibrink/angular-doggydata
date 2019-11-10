@@ -24,5 +24,4 @@ export class DogDetailsComponent implements OnInit {
     const dogId = this.route.snapshot.params.id;
     this.dogDetailsService.getDogDetails(dogId).subscribe(dog => this.dog = dog);
   }
-
 }
