@@ -60,7 +60,7 @@ export class RegisterLitterComponent implements OnInit {
     puppyData.forEach(formGroup => {
       const name = formGroup.pedigreeName;
       const sex = formGroup.sex;
-      pupsOfLitter.push(new Dog(name, birthDateOfLitter, sex));
+      pupsOfLitter.push(new Dog(name, birthDateOfLitter, sex, null));
     });
     const litter = new Litter(pedigreeNameOfMother, pedigreeNameOfFather, birthDateOfLitter, pupsOfLitter );
     this.registerLitterService.registerLitter(litter)

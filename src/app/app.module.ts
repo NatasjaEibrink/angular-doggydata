@@ -11,6 +11,8 @@ import { RegisterLitterComponent } from './components/register-litter/register-l
 import { HeaderComponent } from './components/header/header.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { DogDetailsComponent } from './components/dog-details/dog-details.component';
+import { ShowresultatenComponent } from './components/showresultaten/showresultaten.component';
+import { HealthtestresultsComponent } from './components/healthtestresults/healthtestresults.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { DogDetailsComponent } from './components/dog-details/dog-details.compon
     LitterOverviewComponent,
     RegisterLitterComponent,
     HeaderComponent,
-    DogDetailsComponent
+    DogDetailsComponent,
+    ShowresultatenComponent,
+    HealthtestresultsComponent
   ],
   imports: [
     BrowserModule,

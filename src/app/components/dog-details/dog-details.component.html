@@ -1,7 +1,20 @@
 
 <div class="row">
   <div class="column">
-    <img src="http://www.shibapedigree.com/pics/medium/2643/med_5dc42af385080.jpeg" alt="Baggio">
+
+    <img [src]="convertedImage" >
+
+    <hr />
+
+    <div>
+      <input type="file" (change)="onFileChanged($event)">
+
+      <img [src]="imgURL" height="200" *ngIf="imgURL">
+    </div>
+
+    <input type="button" (click)="onUpload()" value="upload">
+
+
   </div>
   <div class="column">
     <h2>Informatie</h2>
@@ -13,9 +26,9 @@
       <h3>Geslacht</h3>
       <p>{{dog.sex}}</p>
       <h3>Uitslagen gezondheidstesten</h3>
-      <p>klik</p>
+      <p [routerLink]="['/gezondheidstesten', dog.id]">Uitslagen bekijken</p>
       <h3>Showresultaten</h3>
-      <p>klik</p>
+      <p [routerLink]="['/showresultaten', dog.id]">Uitslagen bekijken</p>
     </div>
   </div>
   <div class="column">
