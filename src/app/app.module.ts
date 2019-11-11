@@ -13,6 +13,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { DogDetailsComponent } from './components/dog-details/dog-details.component';
 import { ShowresultatenComponent } from './components/showresultaten/showresultaten.component';
 import { HealthtestresultsComponent } from './components/healthtestresults/healthtestresults.component';
+import { PuppydataComponent } from './components/puppydata/puppydata.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HealthtestresultsComponent } from './components/healthtestresults/healt
     HeaderComponent,
     DogDetailsComponent,
     ShowresultatenComponent,
-    HealthtestresultsComponent
+    HealthtestresultsComponent,
+    PuppydataComponent
   ],
   imports: [
     BrowserModule,

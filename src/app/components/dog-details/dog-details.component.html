@@ -1,37 +1,78 @@
 
 <div class="row">
   <div class="column">
-
-    <img [src]="convertedImage" >
-
+    <img [src]="convertedImage" class="image">
     <hr />
-
     <div>
-      <input type="file" (change)="onFileChanged($event)">
-
-      <img [src]="imgURL" height="200" *ngIf="imgURL">
+      <input type="file" (change)="onFileChanged($event)" class="file-upload">
     </div>
-
     <input type="button" (click)="onUpload()" value="upload">
-
-
   </div>
   <div class="column">
     <h2>Informatie</h2>
     <div class="flex-container" *ngIf="dog">
-      <h3>Naam</h3>
+      <p>
+      <h5>Naam</h5>
       <p>{{dog.pedigreeName}}</p>
-      <h3>Geboortedatum</h3>
+      <h5>Geboortedatum</h5>
       <p>{{dog.formattedBirthDate}}</p>
-      <h3>Geslacht</h3>
+      <h5>Geslacht</h5>
       <p>{{dog.sex}}</p>
-      <h3>Uitslagen gezondheidstesten</h3>
-      <p [routerLink]="['/gezondheidstesten', dog.id]">Uitslagen bekijken</p>
-      <h3>Showresultaten</h3>
-      <p [routerLink]="['/showresultaten', dog.id]">Uitslagen bekijken</p>
+      <h5>Uitslagen gezondheidstesten</h5>
+      <p [routerLink]="['/gezondheidstesten', dog.id]" class="router-link" >Uitslagen bekijken</p>
+      <h5>Showresultaten</h5>
+      <p [routerLink]="['/showresultaten', dog.id]" class="router-link">Uitslagen bekijken</p>
     </div>
   </div>
   <div class="column">
     <h2>Stamboom</h2>
+
+    <div class="pedigree-container">
+      <table id="pedigree" border="0">
+        <tbody>
+        <tr>
+          <td rowspan="4">
+            <a href="http://www.shibapedigree.com/details.php?id=72752" target="_blank" class="link">
+              <p>{{dog.pedigreeName}}</p>
+            </a>
+          </td>
+          <td rowspan="2">
+          <a href="http://www.shibapedigree.com/details.php?id=67490" target="_blank" class="link">
+            <p>Shouryuudou Go Sapporo Kagasou</p>
+          </a>
+        </td>
+          <td>
+            <a href="http://www.shibapedigree.com/details.php?id=67492" target="_blank" class="link">
+              <p>Gokou No Fukukaze Go Shirakayasou</p>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="http://www.shibapedigree.com/details.php?id=67491" target="_blank" class="link">
+              <p>Tenshou Koihime Go Sapporo Kagasou </p>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2">
+            <a href="http://www.shibapedigree.com/details.php?id=68477" target="_blank" class="link">
+              <p>Yoru No Hime Lady In Red </p>
+            </a>
+          </td>
+          <td>
+            <a href="http://www.shibapedigree.com/details.php?id=67920" target="_blank" class="link">
+              <p>Kensei No Fukuaoi Go Sapporo Kagasou </p>
+            </a>
+            <a href="http://www.shibapedigree.com/details.php?id=68471" target="_blank" class="link">
+              <p> Mara-Shimas Princess Of The Night</p>
+            </a>
+          </td>
+        </tr>
+        <tr>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

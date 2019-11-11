@@ -6,13 +6,15 @@ import {RegisterLitterComponent} from './components/register-litter/register-lit
 import {DogDetailsComponent} from './components/dog-details/dog-details.component';
 import {ShowresultatenComponent} from './components/showresultaten/showresultaten.component';
 import {HealthtestresultsComponent} from './components/healthtestresults/healthtestresults.component';
+import {PuppydataComponent} from './components/puppydata/puppydata.component';
 
 const routes: Routes = [
   {path: 'litters', component: LitterOverviewComponent},
   {path: 'litters/add', component: RegisterLitterComponent},
   {path: "dogs/:id", component: DogDetailsComponent },
   {path: "showresultaten/:id", component: ShowresultatenComponent },
-  {path: 'gezondheidstesten/:id', component: HealthtestresultsComponent }
+  {path: 'gezondheidstesten/:id', component: HealthtestresultsComponent },
+  {path: 'puppygroei', component: PuppydataComponent }
 ];
 
 @NgModule({

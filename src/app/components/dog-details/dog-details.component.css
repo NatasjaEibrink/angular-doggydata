@@ -1,10 +1,15 @@
 
-h2 {
+h2{
+   font-family: "Times New Roman", Times, serif;
+   color: #a1566f;
+   font-weight: bold;
+   text-align: center;
+   padding-top: 10px;
+ }
+
+.link{
   font-family: "Times New Roman", Times, serif;
-  color: #a1566f;
-  font-weight: bold;
-  text-align: left;
-  padding-top: 10px;
+  color: #151116;
 }
 
 .row {
@@ -16,8 +21,18 @@ h2 {
   padding-left: 20px;
   flex: 33%;
 }
-img {
-  padding-top: 90px;
+
+.pedigree-container{
+  width: 80%;
+}
+
+.pedigree-container p{
+  border: 1px solid #9a687a;
+  padding: 1em;
+}
+
+.image {
+  padding-top: 70px;
   padding-bottom: 10px;
   display: block;
   margin-left: auto;
@@ -30,7 +45,30 @@ img {
   flex-direction: column;
 }
 
-.flex-container h3, p {
+.flex-container h5 {
+font-weight: bold;
+}
+
+.flex-container h5, p {
   font-family: "Times New Roman", Times, serif;
   margin: 3px;
+  text-align: center;
 }
+
+.flex-container-image{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="file"]{
+  margin-left: 50px;
+}
+
+input[type="button"]{
+  margin-left: 50px;
+}
+
+.router-link:hover{
+  color: #9a687a;
+}
+

@@ -15,16 +15,19 @@ ul {
 input[type=text] {
   border: none;
   border-bottom: 2px solid #151116;
+  background-color: #eeeeee;
 }
 
 input[type=date] {
   border: none;
   border-bottom: 2px solid #151116;
+  background-color: #eeeeee;
 }
 
 input[type=number] {
   border: none;
   border-bottom: 2px solid #151116;
+  background-color: #eeeeee;
 }
 
 input[type=submit] {
