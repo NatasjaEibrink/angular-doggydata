@@ -6,6 +6,26 @@ h2 {
   padding-top: 10px;
 }
 
+h3, p{
+  font-family: "Times New Roman", Times, serif;
+  color: #a1566f;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.card{
+  background-color: #eeeeee;
+  width: 300px;
+}
+
+.card-header{
+  width: 300px;
+}
+
+.card-body{
+  width: 300px;
+}
+
 .row {
   display: flex;
 }

@@ -55,15 +55,29 @@
   <div class="column">
     <h2>Overzicht uitslagen</h2>
     <div class="flex-container"  *ngFor="let healthTest of healthTests">
-      <h3>Datum</h3>
-      <p>{{healthTest.dateOfExamination}}</p>
-      <h3>Patella</h3>
-      <p>{{healthTest.patella}}</p>
-      <h3>Heupen</h3>
-      <p>{{healthTest.heupen}}</p>
-      <h3>Oogonderzoek</h3>
-      <p>{{healthTest.ogen}}</p>
+
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <p>{{healthTest.dateOfExamination}}</p>
+              </button>
+            </h2>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <h3>Patella</h3>
+              <p>{{healthTest.patella}}</p>
+              <h3>Heupen</h3>
+              <p>{{healthTest.heupen}}</p>
+              <h3>Oogonderzoek</h3>
+              <p>{{healthTest.ogen}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 </div>
-
