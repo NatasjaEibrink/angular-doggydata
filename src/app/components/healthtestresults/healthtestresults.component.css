@@ -13,6 +13,10 @@ h3, p{
   padding-top: 10px;
 }
 
+.card-header h2{
+  text-align: center;
+}
+
 .card{
   background-color: #eeeeee;
   width: 300px;
