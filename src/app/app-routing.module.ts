@@ -7,6 +7,9 @@ import {DogDetailsComponent} from './components/dog-details/dog-details.componen
 import {ShowresultatenComponent} from './components/showresultaten/showresultaten.component';
 import {HealthtestresultsComponent} from './components/healthtestresults/healthtestresults.component';
 import {PuppydataComponent} from './components/puppydata/puppydata.component';
+import {RegisterPuppyWeightComponent} from './components/register-puppy-weight/register-puppy-weight.component';
+import {PuppyWeightGraphComponent} from './components/puppy-weight-graph/puppy-weight-graph.component';
+import {RegisterPuppyWeightFormComponent} from './components/register-puppy-weight-form/register-puppy-weight-form.component';
 
 const routes: Routes = [
   {path: 'litters', component: LitterOverviewComponent},
@@ -14,7 +17,9 @@ const routes: Routes = [
   {path: "dogs/:id", component: DogDetailsComponent },
   {path: "showresultaten/:id", component: ShowresultatenComponent },
   {path: 'gezondheidstesten/:id', component: HealthtestresultsComponent },
-  {path: 'puppygroei', component: PuppydataComponent }
+  {path: 'puppygroei', component: PuppydataComponent },
+  {path: 'puppygroei/register', component: RegisterPuppyWeightComponent },
+  {path: 'puppygroei/graph', component: PuppyWeightGraphComponent }
 ];
 
 @NgModule({

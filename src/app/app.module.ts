@@ -9,11 +9,15 @@ import {RouterModule} from '@angular/router';
 import { LitterOverviewComponent } from './components/litter-overview/litter-overview.component';
 import { RegisterLitterComponent } from './components/register-litter/register-litter.component';
 import { HeaderComponent } from './components/header/header.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DogDetailsComponent } from './components/dog-details/dog-details.component';
 import { ShowresultatenComponent } from './components/showresultaten/showresultaten.component';
 import { HealthtestresultsComponent } from './components/healthtestresults/healthtestresults.component';
 import { PuppydataComponent } from './components/puppydata/puppydata.component';
+import {ChartsModule} from 'ng2-charts';
+import { RegisterPuppyWeightComponent } from './components/register-puppy-weight/register-puppy-weight.component';
+import { PuppyWeightGraphComponent } from './components/puppy-weight-graph/puppy-weight-graph.component';
+import { RegisterPuppyWeightFormComponent } from './components/register-puppy-weight-form/register-puppy-weight-form.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,19 @@ import { PuppydataComponent } from './components/puppydata/puppydata.component';
     DogDetailsComponent,
     ShowresultatenComponent,
     HealthtestresultsComponent,
-    PuppydataComponent
+    PuppydataComponent,
+    RegisterPuppyWeightComponent,
+    PuppyWeightGraphComponent,
+    RegisterPuppyWeightFormComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

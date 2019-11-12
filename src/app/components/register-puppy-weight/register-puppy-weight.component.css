@@ -1,0 +1,42 @@
+span[ng-reflect-router-link] {
+  cursor: pointer;
+}
+
+.btn-primary{
+  background-color: #A9A9A9;
+  border: none;
+}
+span:hover span {
+  color: #9a687a;
+}
+
+th{
+  font-size: 2em; margin: .67em 0;
+  font-family: "Times New Roman", Times, serif;
+  color: #a1566f;
+  font-weight: bold;
+  border-bottom: 1px solid #151116;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table{
+  width: 50%;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  background-color: #eeeeee;
+  padding-left: 20px;
+  flex: 50%;
+}
+
+.form-container{
+  padding-top: 80px;
+}
