@@ -54,19 +54,19 @@
   </div>
   <div class="column">
     <h2>Overzicht uitslagen</h2>
-    <div class="flex-container"  *ngFor="let healthTest of healthTests">
+    <div class="flex-container"  *ngFor="let healthTest of healthTests; let i = index">
 
       <div class="accordion" id="accordionExample">
         <div class="card">
           <div class="card-header" id="headingOne">
             <h2 class="mb-0">
-              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" [attr.data-target]="'#collapse-' + i" aria-expanded="true" aria-controls="collapseOne">
                 <p>{{healthTest.dateOfExamination}}</p>
               </button>
             </h2>
           </div>
 
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div id="collapseOne" [attr.id]="'collapse-' + i" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
               <h3>Patella</h3>
               <p>{{healthTest.patella}}</p>

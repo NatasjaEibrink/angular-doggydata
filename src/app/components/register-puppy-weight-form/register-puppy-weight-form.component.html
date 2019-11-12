@@ -1,5 +1,5 @@
 <div class="container">
-<form>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
 
   <h2>Gewicht van de pup in week:</h2>
 
@@ -21,18 +21,18 @@
       </label>
     </div>
     <div class="col-right">
-      <input type="text">
+      <input type="text" formControlName="weekNumber">
     </div>
   </div>
 
   <div class="row">
     <div class="col-left">
       <label>
-        <span>Gewicht:</span>
+        <span>Gewicht(gram):</span>
       </label>
     </div>
     <div class="col-right">
-      <input type="text">
+      <input type="text" formControlName="weight">
     </div>
   </div>
   <button type="submit" class="btn btn-secondary">Submit</button>
