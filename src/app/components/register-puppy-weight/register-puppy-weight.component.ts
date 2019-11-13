@@ -34,4 +34,7 @@ export class RegisterPuppyWeightComponent implements OnInit {
     this.dogId = dogId;
   }
 
+  clearDogId = () => {
+    this.dogId = undefined;
+  }
 }

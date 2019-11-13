@@ -1,0 +1,35 @@
+h2{
+  font-family: "Times New Roman", Times, serif;
+  color: #a1566f;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+.row {
+  display: flex;
+}
+
+.column {
+  background-color: #eeeeee;
+  padding-left: 20px;
+  flex: 50%;
+}
+
+.btn {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  display: block;
+  margin: auto;
+  position:relative;
+  top:50%;
+  width: 30%;
+  background-color: #cd8ea5;
+  border: none;
+  color: white;
+  font-size: 100px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: blanchedalmond;
+}

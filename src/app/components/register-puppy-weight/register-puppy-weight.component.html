@@ -25,7 +25,7 @@
   </div>
    <div class="column">
      <div class="form-container">
-     <app-register-puppy-weight-form [dogId]="dogId" *ngIf="dogId"></app-register-puppy-weight-form>
+     <app-register-puppy-weight-form [dogId]="dogId" [afterSave]="clearDogId" *ngIf="dogId"></app-register-puppy-weight-form>
      </div>
    </div>
 </div>

@@ -16,6 +16,9 @@ export class RegisterPuppyWeightFormComponent implements OnInit {
   @Input()
   dogId;
 
+  @Input()
+  afterSave: () => void;
+
   constructor(private route: ActivatedRoute,
               private router: Router,
               private puppyDataService: PuppyDataService) { }
@@ -33,7 +36,7 @@ export class RegisterPuppyWeightFormComponent implements OnInit {
     const dogId = this.dogId;
     this.puppyDataService.registerPuppyWeight(dogId, {weekNumber,weight})
       .subscribe(status => {
-        this.router.navigate(['/puppygroei']);
+        this.afterSave();
       });
   }
 
