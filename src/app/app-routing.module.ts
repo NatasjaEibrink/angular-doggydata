@@ -9,9 +9,12 @@ import {HealthtestresultsComponent} from './components/healthtestresults/healtht
 import {PuppydataComponent} from './components/puppydata/puppydata.component';
 import {RegisterPuppyWeightComponent} from './components/register-puppy-weight/register-puppy-weight.component';
 import {PuppyWeightGraphComponent} from './components/puppy-weight-graph/puppy-weight-graph.component';
-import {RegisterPuppyWeightFormComponent} from './components/register-puppy-weight-form/register-puppy-weight-form.component';
+import {PhotoAlbumComponent} from './components/photo-album/photo-album.component';
+import {HomeComponent} from './components/home/home.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent },
   {path: 'litters', component: LitterOverviewComponent},
   {path: 'litters/add', component: RegisterLitterComponent},
   {path: "dogs/:id", component: DogDetailsComponent },
@@ -19,7 +22,8 @@ const routes: Routes = [
   {path: 'gezondheidstesten/:id', component: HealthtestresultsComponent },
   {path: 'puppygroei', component: PuppydataComponent },
   {path: 'puppygroei/register', component: RegisterPuppyWeightComponent },
-  {path: 'puppygroei/graph', component: PuppyWeightGraphComponent }
+  {path: 'puppygroei/graph', component: PuppyWeightGraphComponent },
+  {path: 'photos', component: PhotoAlbumComponent}
 ];
 
 @NgModule({

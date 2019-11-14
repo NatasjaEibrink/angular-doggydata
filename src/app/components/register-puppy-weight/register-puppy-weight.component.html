@@ -1,15 +1,15 @@
- <div class="row">
-   <div class="column">
+<div class="row">
+  <div class="column">
     <table>
       <thead>
       <tr>
-        <th>Geboortedatum</th>
+        <th>Nestcombinatie</th>
         <th>Pups</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let litter of litters">
-        <td>{{ litter.birthDateOfLitter }}</td>
+        <td>{{litter.pedigreeNameOfMother}} X {{litter.pedigreeNameOfFather}}</td>
         <td>
           <div class="flex-container">
       <span *ngFor="let pup of litter.pupsOfLitter">
@@ -23,9 +23,9 @@
       </tbody>
     </table>
   </div>
-   <div class="column">
-     <div class="form-container">
-     <app-register-puppy-weight-form [dogId]="dogId" [afterSave]="clearDogId" *ngIf="dogId"></app-register-puppy-weight-form>
-     </div>
-   </div>
+  <div class="column">
+    <div class="form-container">
+      <app-register-puppy-weight-form [dogId]="dogId" [afterSave]="clearDogId" *ngIf="dogId"></app-register-puppy-weight-form>
+    </div>
+  </div>
 </div>

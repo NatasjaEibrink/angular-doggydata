@@ -1,0 +1,49 @@
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  color: #a1566f;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 10px;
+}
+
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid #151116;
+  background-color: #eeeeee;
+}
+
+input[type=date] {
+  border: none;
+  border-bottom: 2px solid #151116;
+  background-color: #eeeeee;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  padding-left: 20px;
+  flex: 33%;
+}
+
+.col-left {
+  padding-left: 20px;
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-right {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

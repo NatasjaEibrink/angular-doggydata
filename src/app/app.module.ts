@@ -18,6 +18,8 @@ import {ChartsModule} from 'ng2-charts';
 import { RegisterPuppyWeightComponent } from './components/register-puppy-weight/register-puppy-weight.component';
 import { PuppyWeightGraphComponent } from './components/puppy-weight-graph/puppy-weight-graph.component';
 import { RegisterPuppyWeightFormComponent } from './components/register-puppy-weight-form/register-puppy-weight-form.component';
+import { PhotoAlbumComponent } from './components/photo-album/photo-album.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { RegisterPuppyWeightFormComponent } from './components/register-puppy-we
     PuppydataComponent,
     RegisterPuppyWeightComponent,
     PuppyWeightGraphComponent,
-    RegisterPuppyWeightFormComponent
+    RegisterPuppyWeightFormComponent,
+    PhotoAlbumComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
