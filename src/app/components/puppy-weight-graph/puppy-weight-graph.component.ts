@@ -53,14 +53,16 @@ export class PuppyWeightGraphComponent implements OnInit {
 
   updateGraph(puppyData: {[key: number]:PuppyData[]}){
     const lineChartData = [];
-    const lineChartLabels = [];
+    let lineChartLabels = [];
     Object.keys(puppyData).forEach(dogId => {
       const parsedData = this.parseData(puppyData[dogId]);
       lineChartData.push({data: parsedData.dataPoints, label: parsedData.labelName})
-      lineChartLabels.push(parsedData.labels)
+      lineChartLabels = lineChartLabels.concat(parsedData.labels)
     });
 
     this.lineChartData = lineChartData;
+    console.log(this.lineChartData);
     this.lineChartLabels = Array.from(new Set(lineChartLabels)).sort((a,b) => a-b);
+    console.log(this.lineChartLabels);
   }
 }
